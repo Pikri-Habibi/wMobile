@@ -1,11 +1,18 @@
+
 class AuthDemoStore {
-  // Tempat menyimpan banyak data pengguna
+  // Tempat menyimpan data seluruh pengguna
   static List<Map<String, String>> daftarPengguna = [];
 
   // Fungsi untuk mendaftarkan pengguna baru
   static bool daftar({
     required String namaPengguna,
     required String emailPengguna,
+    required String nimPengguna,
+    required String genderPengguna,
+    required String tanggalLahirPengguna,
+    required String prodiPengguna,
+    required String noHpPengguna,
+    required String alamatPengguna,
     required String passwordPengguna,
   }) {
     // Periksa apakah email sudah digunakan
@@ -17,17 +24,23 @@ class AuthDemoStore {
       return false;
     }
 
-    // Simpan pengguna baru ke dalam List
+    // Simpan seluruh data pengguna
     daftarPengguna.add({
       'nama': namaPengguna,
       'email': emailPengguna,
+      'nim': nimPengguna,
+      'gender': genderPengguna,
+      'tanggal_lahir': tanggalLahirPengguna,
+      'prodi': prodiPengguna,
+      'no_hp': noHpPengguna,
+      'alamat': alamatPengguna,
       'password': passwordPengguna,
     });
 
     return true;
   }
 
-  // Fungsi untuk memeriksa login
+  // Fungsi untuk memeriksa login pengguna
   static Map<String, String>? login({
     required String emailPengguna,
     required String passwordPengguna,

@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF6254D9),
         ),
-        scaffoldBackgroundColor: const Color(0xFFF8F8FC),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 235, 237, 239),
         fontFamily: 'Roboto',
       ),
       home: const LoginPage(),
